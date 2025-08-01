@@ -1,0 +1,139 @@
+{
+  "extracted_data": {
+    "abstract": "We study empirical scaling laws for language model performance on the cross-entropy loss. The loss scales as a power-law with model size, dataset size, and the amount of compute used for training, with some trends spanning more than seven orders of magnitude. Other architectural details such as network width or depth have minimal effects within a wide range. Simple equations govern the dependence of overfitting on model/dataset size and the dependence of training speed on model size. These relationships allow us to determine the optimal allocation of a fixed compute budget. Larger models are significantly more sample-efficient, such that optimally compute-efficient training involves training very large models on a relatively modest amount of data and stopping significantly before convergence.",
+    "authors": [
+      {
+        "name": "Jared Kaplan",
+        "type": "person"
+      },
+      {
+        "name": "Sam McCandlish",
+        "type": "person"
+      },
+      {
+        "name": "Tom Henighan",
+        "type": "person"
+      },
+      {
+        "name": "Tom B. Brown",
+        "type": "person"
+      },
+      {
+        "name": "Benjamin Chess",
+        "type": "person"
+      },
+      {
+        "name": "Rewon Child",
+        "type": "person"
+      },
+      {
+        "name": "Scott Gray",
+        "type": "person"
+      },
+      {
+        "name": "Alec Radford",
+        "type": "person"
+      },
+      {
+        "name": "Jeffrey Wu",
+        "type": "person"
+      },
+      {
+        "name": "Dario Amodei",
+        "type": "person"
+      }
+    ],
+    "cff-version": "1.2.0",
+    "commit": {
+      "version": "v1",
+      "timestamp": "2020-01-23T03:59:20Z",
+      "author": "Samuel McCandlish",
+      "identifier": "2001.08361"
+    },
+    "contact": [
+      {
+        "type": "person",
+        "name": "Samuel McCandlish",
+        "email": null,
+        "affiliation": null
+      }
+    ],
+    "date-released": "2020-01-23",
+    "doi": "10.48550/arXiv.2001.08361",
+    "identifiers": [
+      {
+        "type": "doi",
+        "value": "10.48550/arXiv.2001.08361"
+      },
+      {
+        "type": "arxiv",
+        "value": "2001.08361"
+      }
+    ],
+    "keywords": [
+      "neural language models",
+      "scaling laws",
+      "machine learning",
+      "model size",
+      "dataset size",
+      "compute efficiency",
+      "power-law scaling",
+      "cross-entropy loss",
+      "model training",
+      "overfitting"
+    ],
+    "license": null,
+    "license-url": null,
+    "message": "If you use this software, please cite it using the metadata from this file.",
+    "preferred-citation": {
+      "text": "arXiv:2001.08361 [cs.LG]"
+    },
+    "references": [
+      {
+        "id": "2001.08361",
+        "title": "Scaling Laws for Neural Language Models",
+        "type": "paper",
+        "url": "https://doi.org/10.48550/arXiv.2001.08361"
+      }
+    ],
+    "repository": "https://doi.org/10.48550/arXiv.2001.08361",
+    "repository-artifact": "https://doi.org/10.48550/arXiv.2001.08361",
+    "repository-code": null,
+    "title": "Scaling Laws for Neural Language Models",
+    "type": "software",
+    "url": "https://doi.org/10.48550/arXiv.2001.08361",
+    "version": "v1"
+  },
+  "metadata": {
+    "processing_stats": {
+      "total_tokens": 319,
+      "api_calls": 21,
+      "processing_time": 49.108732,
+      "complexity_score": 95,
+      "strategy_used": "decomposed_parallel",
+      "success_rate": 0.8571428571428571
+    },
+    "confidence_metrics": [
+      {
+        "field_path": "decomposed_root",
+        "confidence_score": 0.8571428571428571,
+        "extraction_method": "decomposed_parallel",
+        "validation_passed": true,
+        "human_review_required": false,
+        "error_details": null
+      }
+    ],
+    "validation_errors": [],
+    "human_review_required": [],
+    "overall_confidence": 0.8571428571428571,
+    "total_processing_time": 49.120921,
+    "timestamp": "2025-08-01T19:01:44.228740",
+    "input_files": {
+      "input_file": "inputs/scaling_law_dump.txt",
+      "input_type": "text",
+      "schema_file": "inputs/paper_citations_schema.json",
+      "text_length": 1353,
+      "schema_complexity": 95
+    }
+  }
+}
