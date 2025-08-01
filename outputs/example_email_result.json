@@ -1,0 +1,274 @@
+{
+  "extracted_data": {
+    "conversation": {
+      "subject": "API Integration Project - Requirements and Timeline",
+      "participants": [
+        {
+          "name": "Alice Chen",
+          "email": "alice@techcorp.com",
+          "company": "TechCorp Inc.",
+          "role": "Senior Product Manager"
+        },
+        {
+          "name": "Bob Martinez",
+          "email": "bob@vendor.com",
+          "company": "VendorTech Solutions",
+          "role": "Solutions Architect"
+        },
+        {
+          "name": "Carol Williams",
+          "email": "carol@techcorp.com",
+          "company": "TechCorp Inc.",
+          "role": "Project Manager"
+        }
+      ],
+      "messages": [
+        {
+          "from": "alice@techcorp.com",
+          "to": "bob@vendor.com, carol@techcorp.com",
+          "subject": "Re: API Integration Project - Requirements and Timeline",
+          "date": "March 15, 2024 14:30:00 UTC",
+          "message_id": "20240315143000.12345@techcorp.com",
+          "content": "Hi Bob and Carol, Thanks for the detailed proposal. After reviewing with our technical team, here are our requirements and feedback: [Technical requirements and project details...]",
+          "sender_info": {
+            "name": "Alice Chen",
+            "title": "Senior Product Manager",
+            "company": "TechCorp Inc."
+          }
+        },
+        {
+          "from": "bob@vendor.com",
+          "to": "alice@techcorp.com, carol@techcorp.com",
+          "subject": "Re: API Integration Project - Requirements and Timeline",
+          "date": "March 16, 2024 09:15:00 UTC",
+          "message_id": "20240316091500.67890@vendor.com",
+          "content": "Hi Alice and Carol, Perfect! We can meet all your requirements. Here's our confirmation and updated specs: [Technical confirmation and updated details...]",
+          "sender_info": {
+            "name": "Bob Martinez",
+            "title": "Solutions Architect",
+            "company": "VendorTech Solutions"
+          }
+        },
+        {
+          "from": "carol@techcorp.com",
+          "to": "alice@techcorp.com, bob@vendor.com",
+          "subject": "Re: API Integration Project - Requirements and Timeline",
+          "date": "March 16, 2024 16:45:00 UTC",
+          "message_id": "20240316164500.11111@techcorp.com",
+          "content": "Hi Alice and Bob, Excellent! I've reviewed the updated proposal and it looks great. Here's my approval and next steps: [Approval details and next steps...]",
+          "sender_info": {
+            "name": "Carol Williams",
+            "title": "Project Manager",
+            "company": "TechCorp Inc."
+          }
+        }
+      ]
+    },
+    "project_details": {
+      "project_name": "API Integration Project",
+      "technical_requirements": [
+        {
+          "requirement": "Authentication",
+          "specification": "OAuth 2.0 with refresh tokens",
+          "status": "confirmed"
+        },
+        {
+          "requirement": "Rate limiting",
+          "specification": "1000 requests per hour (upgraded to 2000/hour)",
+          "status": "confirmed"
+        },
+        {
+          "requirement": "Data format",
+          "specification": "JSON with UTF-8 encoding",
+          "status": "confirmed"
+        },
+        {
+          "requirement": "Response time",
+          "specification": "Under 200ms for 95% of requests (average 45ms)",
+          "status": "confirmed"
+        },
+        {
+          "requirement": "Availability",
+          "specification": "99.95% uptime SLA",
+          "status": "confirmed"
+        },
+        {
+          "requirement": "Security",
+          "specification": "TLS 1.3 minimum, API key rotation every 90 days",
+          "status": "confirmed"
+        }
+      ],
+      "timeline": [
+        {
+          "milestone": "Technical setup",
+          "date": "March 18-22, 2024",
+          "status": "confirmed"
+        },
+        {
+          "milestone": "Integration testing",
+          "date": "April 1-15, 2024",
+          "status": "confirmed"
+        },
+        {
+          "milestone": "Pilot launch",
+          "date": "April 18, 2024",
+          "status": "modified"
+        },
+        {
+          "milestone": "Full production",
+          "date": "May 1, 2024",
+          "status": "confirmed"
+        }
+      ],
+      "budget": {
+        "implementation_cost": "70000",
+        "monthly_recurring": "8000",
+        "additional_support": "1800",
+        "currency": "USD"
+      },
+      "team_assignments": [
+        {
+          "role": "Project Manager",
+          "name": "Carol Williams",
+          "email": "carol@techcorp.com",
+          "company": "TechCorp Inc."
+        },
+        {
+          "role": "Technical Lead",
+          "name": "David Kumar",
+          "email": "david@techcorp.com",
+          "company": "TechCorp Inc."
+        },
+        {
+          "role": "QA Lead",
+          "name": "Emma Rodriguez",
+          "email": "emma@techcorp.com",
+          "company": "TechCorp Inc."
+        },
+        {
+          "role": "Vendor Project Manager",
+          "name": "Bob Martinez",
+          "email": "bob@vendor.com",
+          "company": "VendorTech Solutions"
+        },
+        {
+          "role": "Vendor Technical Lead",
+          "name": "Sarah Johnson",
+          "email": "sarah@vendor.com",
+          "company": "VendorTech Solutions"
+        },
+        {
+          "role": "Support Lead",
+          "name": "Mike Thompson",
+          "email": "mike@vendor.com",
+          "company": "VendorTech Solutions"
+        }
+      ]
+    },
+    "agreements": [
+      {
+        "topic": "Authentication",
+        "agreed_value": "OAuth 2.0 with refresh tokens",
+        "status": "confirmed"
+      },
+      {
+        "topic": "Rate Limiting",
+        "agreed_value": "2000 requests per hour",
+        "status": "confirmed"
+      },
+      {
+        "topic": "Response Time",
+        "agreed_value": "Under 200ms for 95% of requests",
+        "status": "confirmed"
+      },
+      {
+        "topic": "Availability",
+        "agreed_value": "99.95% uptime",
+        "status": "confirmed"
+      },
+      {
+        "topic": "Implementation Cost",
+        "agreed_value": "$70,000",
+        "status": "confirmed"
+      },
+      {
+        "topic": "Monthly Recurring Cost",
+        "agreed_value": "$8,000",
+        "status": "confirmed"
+      },
+      {
+        "topic": "Premium Support",
+        "agreed_value": "$1,800/month",
+        "status": "confirmed"
+      },
+      {
+        "topic": "Pilot Launch Date",
+        "agreed_value": "April 18, 2024",
+        "status": "confirmed"
+      },
+      {
+        "topic": "Full Production Date",
+        "agreed_value": "May 1, 2024",
+        "status": "confirmed"
+      },
+      {
+        "topic": "Contract Signing",
+        "agreed_value": "March 21, 2024",
+        "status": "pending"
+      }
+    ],
+    "next_steps": [
+      {
+        "step": "Legal review of contract",
+        "date": "March 17-19",
+        "responsible_party": "legal@techcorp.com"
+      },
+      {
+        "step": "Technical deep-dive call",
+        "date": "March 20, 2 PM EST",
+        "responsible_party": null
+      },
+      {
+        "step": "Contract signing",
+        "date": "March 21",
+        "responsible_party": null
+      },
+      {
+        "step": "Project kickoff",
+        "date": "March 22",
+        "responsible_party": null
+      }
+    ]
+  },
+  "metadata": {
+    "processing_stats": {
+      "total_tokens": 976,
+      "api_calls": 4,
+      "processing_time": 25.754524,
+      "complexity_score": 95,
+      "strategy_used": "decomposed_parallel",
+      "success_rate": 1.0
+    },
+    "confidence_metrics": [
+      {
+        "field_path": "decomposed_root",
+        "confidence_score": 1.0,
+        "extraction_method": "decomposed_parallel",
+        "validation_passed": true,
+        "human_review_required": false,
+        "error_details": null
+      }
+    ],
+    "validation_errors": [],
+    "human_review_required": [],
+    "overall_confidence": 1.0,
+    "total_processing_time": 25.760758,
+    "timestamp": "2025-08-01T01:17:45.953832",
+    "input_files": {
+      "text_file": "email_conversation.txt",
+      "schema_file": "email_schema.json",
+      "text_length": 3780,
+      "schema_complexity": 95
+    }
+  }
+}

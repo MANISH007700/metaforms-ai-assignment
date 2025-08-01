@@ -1,0 +1,100 @@
+{
+  "type": "object",
+  "properties": {
+    "customer": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "customer_id": {"type": "string"},
+        "email": {"type": "string"},
+        "phone": {"type": "string"},
+        "account_status": {"type": "string"},
+        "member_since": {"type": "string"},
+        "contact_details": {
+          "type": "object",
+          "properties": {
+            "address": {"type": "string"},
+            "preferred_contact_method": {"type": "string"},
+            "language": {"type": "string"}
+          }
+        }
+      },
+      "required": ["name", "customer_id", "email"]
+    },
+    "interaction": {
+      "type": "object",
+      "properties": {
+        "date": {"type": "string"},
+        "time": {"type": "string"},
+        "duration": {"type": "string"},
+        "agent": {
+          "type": "object",
+          "properties": {
+            "name": {"type": "string"},
+            "agent_id": {"type": "string"}
+          }
+        },
+        "interaction_type": {"type": "string"},
+        "priority": {"type": "string", "enum": ["low", "medium", "high", "urgent"]},
+        "issue_description": {"type": "string"},
+        "technical_details": {
+          "type": "object",
+          "properties": {
+            "browser": {"type": "string"},
+            "operating_system": {"type": "string"},
+            "device": {"type": "string"},
+            "network": {"type": "string"},
+            "previous_login": {"type": "string"}
+          }
+        },
+        "resolution_steps": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "outcome": {
+          "type": "object",
+          "properties": {
+            "status": {"type": "string", "enum": ["resolved", "pending", "escalated", "closed"]},
+            "customer_satisfaction": {"type": "string"},
+            "follow_up_required": {"type": "boolean"},
+            "next_action": {"type": "string"}
+          }
+        },
+        "additional_notes": {"type": "string"},
+        "products_services": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      },
+      "required": ["date", "interaction_type", "priority"]
+    },
+    "billing": {
+      "type": "object",
+      "properties": {
+        "account_balance": {"type": "string"},
+        "last_payment": {
+          "type": "object",
+          "properties": {
+            "date": {"type": "string"},
+            "amount": {"type": "string"}
+          }
+        },
+        "next_payment_due": {"type": "string"},
+        "payment_method": {"type": "string"}
+      }
+    },
+    "support_ticket": {
+      "type": "object",
+      "properties": {
+        "ticket_id": {"type": "string"},
+        "category": {"type": "string"},
+        "subcategory": {"type": "string"},
+        "escalation_level": {"type": "string"},
+        "resolution_time": {"type": "string"},
+        "first_call_resolution": {"type": "boolean"}
+      },
+      "required": ["ticket_id", "category"]
+    }
+  },
+  "required": ["customer", "interaction"]
+} 

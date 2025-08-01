@@ -1,0 +1,23 @@
+# Core dependencies (existing)
+anthropic>=0.28.0
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.5.0
+
+# New dependencies for improvements
+tiktoken>=0.5.0           # Accurate token counting
+tenacity>=8.2.0           # Retry logic
+jsonschema>=4.20.0        # JSON schema validation
+python-multipart>=0.0.6   # File upload support
+python-dotenv>=1.0.0      # Environment variable support
+structlog>=23.2.0         # Structured logging
+prometheus-client>=0.19.0 # Metrics (optional)
+redis>=5.0.0              # Caching (optional)
+
+# PDF processing libraries (for resume extraction)
+PyMuPDF>=1.23.0           # Best PDF text extraction
+PyPDF2>=3.0.0             # Alternative PDF library
+pdfplumber>=0.10.0        # Another PDF extraction option
+
+# Environment management
+python-dotenv>=1.0.0      # Enhanced .env file support

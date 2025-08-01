@@ -1,0 +1,170 @@
+{
+  "type": "object",
+  "properties": {
+    "personal_info": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "email": {"type": "string"},
+        "phone": {"type": "string"},
+        "location": {
+          "type": "object",
+          "properties": {
+            "city": {"type": "string"},
+            "state": {"type": "string"},
+            "country": {"type": "string"},
+            "zip_code": {"type": "string"}
+          }
+        },
+        "linkedin": {"type": "string"},
+        "website": {"type": "string"},
+        "summary": {"type": "string"}
+      },
+      "required": ["name", "email"]
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "institution": {"type": "string"},
+          "degree": {"type": "string"},
+          "field_of_study": {"type": "string"},
+          "start_date": {"type": "string"},
+          "end_date": {"type": "string"},
+          "gpa": {"type": "string"},
+          "honors": {"type": "string"},
+          "relevant_coursework": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "required": ["institution", "degree"]
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company": {"type": "string"},
+          "position": {"type": "string"},
+          "location": {"type": "string"},
+          "start_date": {"type": "string"},
+          "end_date": {"type": "string"},
+          "current": {"type": "boolean"},
+          "description": {"type": "string"},
+          "achievements": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "technologies": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "required": ["company", "position"]
+      }
+    },
+    "skills": {
+      "type": "object",
+      "properties": {
+        "technical_skills": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "soft_skills": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "language": {"type": "string"},
+              "proficiency": {"type": "string"}
+            }
+          }
+        },
+        "certifications": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "issuer": {"type": "string"},
+              "date_obtained": {"type": "string"},
+              "expiry_date": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "technologies": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "url": {"type": "string"},
+          "github": {"type": "string"},
+          "start_date": {"type": "string"},
+          "end_date": {"type": "string"}
+        },
+        "required": ["name", "description"]
+      }
+    },
+    "volunteer": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "organization": {"type": "string"},
+          "role": {"type": "string"},
+          "start_date": {"type": "string"},
+          "end_date": {"type": "string"},
+          "description": {"type": "string"}
+        }
+      }
+    },
+    "awards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "issuer": {"type": "string"},
+          "date": {"type": "string"},
+          "description": {"type": "string"}
+        }
+      }
+    },
+    "publications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {"type": "string"},
+          "journal": {"type": "string"},
+          "date": {"type": "string"},
+          "url": {"type": "string"},
+          "authors": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "interests": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  },
+  "required": ["personal_info"]
+} 

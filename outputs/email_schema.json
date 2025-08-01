@@ -1,0 +1,118 @@
+{
+  "type": "object",
+  "properties": {
+    "conversation": {
+      "type": "object",
+      "properties": {
+        "subject": {"type": "string"},
+        "participants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "email": {"type": "string"},
+              "company": {"type": "string"},
+              "role": {"type": "string"}
+            }
+          }
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {"type": "string"},
+              "to": {"type": "string"},
+              "subject": {"type": "string"},
+              "date": {"type": "string"},
+              "message_id": {"type": "string"},
+              "content": {"type": "string"},
+              "sender_info": {
+                "type": "object",
+                "properties": {
+                  "name": {"type": "string"},
+                  "title": {"type": "string"},
+                  "company": {"type": "string"}
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": ["subject", "participants", "messages"]
+    },
+    "project_details": {
+      "type": "object",
+      "properties": {
+        "project_name": {"type": "string"},
+        "technical_requirements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "requirement": {"type": "string"},
+              "specification": {"type": "string"},
+              "status": {"type": "string", "enum": ["requested", "confirmed", "pending"]}
+            }
+          }
+        },
+        "timeline": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "milestone": {"type": "string"},
+              "date": {"type": "string"},
+              "status": {"type": "string", "enum": ["planned", "confirmed", "modified"]}
+            }
+          }
+        },
+        "budget": {
+          "type": "object",
+          "properties": {
+            "implementation_cost": {"type": "string"},
+            "monthly_recurring": {"type": "string"},
+            "additional_support": {"type": "string"},
+            "currency": {"type": "string", "default": "USD"}
+          }
+        },
+        "team_assignments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "role": {"type": "string"},
+              "name": {"type": "string"},
+              "email": {"type": "string"},
+              "company": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "agreements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "topic": {"type": "string"},
+          "agreed_value": {"type": "string"},
+          "status": {"type": "string", "enum": ["proposed", "confirmed", "pending"]}
+        }
+      }
+    },
+    "next_steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step": {"type": "string"},
+          "date": {"type": "string"},
+          "responsible_party": {"type": "string"}
+        }
+      }
+    }
+  },
+  "required": ["conversation", "project_details"]
+} 

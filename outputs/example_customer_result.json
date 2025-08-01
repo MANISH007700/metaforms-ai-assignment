@@ -1,0 +1,104 @@
+{
+  "extracted_data": {
+    "customer": {
+      "name": "Sarah Johnson",
+      "customer_id": "CUST-2024-001",
+      "email": "sarah.johnson@email.com",
+      "phone": "(555) 123-4567",
+      "account_status": "Active",
+      "member_since": "January 15, 2022",
+      "contact_details": {
+        "address": "123 Main Street, Springfield, IL 62701",
+        "preferred_contact_method": "Email",
+        "language": "English"
+      }
+    },
+    "interaction": {
+      "date": "March 15, 2024",
+      "time": "2:30 PM EST",
+      "duration": "25 minutes",
+      "agent": {
+        "name": "Michael Chen",
+        "agent_id": "AGT-789"
+      },
+      "interaction_type": "Technical Support",
+      "priority": "medium",
+      "issue_description": "Customer reported difficulty accessing the online portal. Error message displayed: \"Session timeout - please log in again.\" Customer attempted to reset password but encountered issues with the verification process.",
+      "technical_details": {
+        "browser": "Chrome 122.0.6261.69",
+        "operating_system": "Windows 11",
+        "device": "Desktop computer",
+        "network": "Home WiFi connection",
+        "previous_login": "March 14, 2024 at 9:15 AM"
+      },
+      "resolution_steps": [
+        "Verified customer account status (Active)",
+        "Guided customer through password reset process",
+        "Cleared browser cache and cookies",
+        "Provided alternative login method via mobile app",
+        "Scheduled follow-up call for March 16, 2024"
+      ],
+      "outcome": {
+        "status": "resolved",
+        "customer_satisfaction": "4/5 stars",
+        "follow_up_required": true,
+        "next_action": "Monitor login attempts for next 48 hours"
+      },
+      "additional_notes": "Customer mentioned they will be traveling next week and may need mobile app support. Agent provided instructions for mobile login and troubleshooting steps.",
+      "products_services": [
+        "Online Banking Portal",
+        "Mobile Banking App",
+        "Password Reset Service",
+        "Customer Support Hotline"
+      ]
+    },
+    "billing": {
+      "account_balance": "$2,450.67",
+      "last_payment": {
+        "date": "March 1, 2024",
+        "amount": "$150.00"
+      },
+      "next_payment_due": "April 1, 2024",
+      "payment_method": "Automatic bank transfer"
+    },
+    "support_ticket": {
+      "ticket_id": "TKT-2024-0315-001",
+      "category": "Technical Support",
+      "subcategory": "Login Issues",
+      "escalation_level": "None",
+      "resolution_time": "25 minutes",
+      "first_call_resolution": true
+    }
+  },
+  "metadata": {
+    "processing_stats": {
+      "total_tokens": 439,
+      "api_calls": 4,
+      "processing_time": 11.292286,
+      "complexity_score": 95,
+      "strategy_used": "decomposed_parallel",
+      "success_rate": 1.0
+    },
+    "confidence_metrics": [
+      {
+        "field_path": "decomposed_root",
+        "confidence_score": 1.0,
+        "extraction_method": "decomposed_parallel",
+        "validation_passed": true,
+        "human_review_required": false,
+        "error_details": null
+      }
+    ],
+    "validation_errors": [],
+    "human_review_required": [],
+    "overall_confidence": 1.0,
+    "total_processing_time": 11.298864,
+    "timestamp": "2025-08-01T01:15:37.427499",
+    "input_files": {
+      "text_file": "sample_text.txt",
+      "schema_file": "customer_service_schema.json",
+      "text_length": 1961,
+      "schema_complexity": 95
+    }
+  }
+}
