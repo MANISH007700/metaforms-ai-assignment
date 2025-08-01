@@ -1,0 +1,262 @@
+{
+  "extracted_data": {
+    "personal_info": {
+      "name": "Manish Sharma",
+      "location": {
+        "city": "Bangalore",
+        "state": null,
+        "country": "India",
+        "zip_code": "560068"
+      },
+      "phone": "+91-9342533525",
+      "email": null,
+      "linkedin": "Linkedin",
+      "website": null,
+      "summary": "Machine Learning Engineer with experience in building recommendation systems, fine-tuning LLMs, and developing AI solutions. Expertise in NLP, machine learning, and cloud technologies. Previously worked at Parspec.io and Docsumo-AI, with research experience at Indian Institute of Science."
+    },
+    "education": [],
+    "experience": [
+      {
+        "company": "Parspec.io",
+        "position": "Machine Learning Engineer - 2",
+        "location": "Bangalore",
+        "start_date": "Jan 2024",
+        "end_date": null,
+        "current": true,
+        "description": "Working on machine learning and LLM solutions",
+        "achievements": [
+          "Built Datasheet Recommendation System with 80% latency reduction",
+          "Fine-tuned Llama 3.3 70B Instruct Model",
+          "Achieved 90% accuracy in matching model numbers across 5 million documents",
+          "Developed family name extraction algorithm improving recall from 89% to 96%",
+          "Migrated AI-dev Kubernetes workload to AWS EKS",
+          "Designed order information detection algorithm with 95% accuracy",
+          "Enhanced header and column detection algorithm to 97% accuracy",
+          "Implemented LLM as Judge pipeline reducing human annotation to 74%",
+          "Built multimodal RAG pipeline achieving MRR of 0.94"
+        ],
+        "technologies": [
+          "AWS DynamoDB",
+          "Gemini 2.0",
+          "Llama",
+          "Kubernetes",
+          "AWS EKS",
+          "T5-base",
+          "GPT-4",
+          "FAISS"
+        ]
+      },
+      {
+        "company": "Docsumo-AI",
+        "position": "Machine Learning Scientist",
+        "location": "Bangalore",
+        "start_date": "Dec 2022",
+        "end_date": "Dec 2023",
+        "current": false,
+        "description": "Worked on document processing and ML solutions",
+        "achievements": [
+          "Implemented Advanced Document KV + Table Extractor",
+          "Integrated ML & DL architectures into 10+ Custom APIs",
+          "Built Chat-AI using LangChain and PineCone-DB",
+          "Reduced annotation time from 1 day to ~2hrs using GPT-KV LLM Extractor",
+          "Implemented Advanced Synthetic Data Generation Pipeline"
+        ],
+        "technologies": [
+          "LayoutLM",
+          "BROS",
+          "YOLO",
+          "LangChain",
+          "PineCone-DB",
+          "GPT-4"
+        ]
+      },
+      {
+        "company": "Indian Institute of Science",
+        "position": "Research Assistant Intern",
+        "location": "Bangalore",
+        "start_date": "June 2021",
+        "end_date": "Sep 2021",
+        "current": false,
+        "description": "Worked on OCR and Speech Recognition tasks",
+        "achievements": [
+          "Collated and PreProcessed Hindi Datasets for OCR and Speech Recognition",
+          "Worked with PyTesseract and EasyOCR for Text Extractions",
+          "Implemented Librosa and MelSpectrogram for ASR Tasks"
+        ],
+        "technologies": [
+          "PyTesseract",
+          "EasyOCR",
+          "Librosa",
+          "MelSpectrogram"
+        ]
+      }
+    ],
+    "skills": {
+      "languages_and_frameworks": [
+        "Python",
+        "FastAPI",
+        "Flask",
+        "GitHub",
+        "Ollama",
+        "OpenRouter",
+        "HuggingFace"
+      ],
+      "ai_ml": [
+        "Machine Learning",
+        "Deep Learning",
+        "NLP",
+        "PyTorch",
+        "TensorFlow",
+        "Transformers",
+        "LLMs",
+        "RAG",
+        "Vector Databases"
+      ],
+      "cloud_and_devops": [
+        "AWS",
+        "GCP",
+        "Kubernetes",
+        "Docker",
+        "EKS",
+        "ECS"
+      ],
+      "databases": [
+        "MySQL",
+        "Neo4j",
+        "Amazon DynamoDB",
+        "Hasura-DB"
+      ],
+      "technical_skills": [
+        "Python",
+        "FastAPI",
+        "Flask",
+        "GitHub",
+        "Ollama",
+        "OpenRouter",
+        "HuggingFace",
+        "PyTorch",
+        "TensorFlow",
+        "Machine Learning",
+        "Deep Learning",
+        "NLP",
+        "NLTK",
+        "Spacy",
+        "MySQL",
+        "Neo4j",
+        "Tableau",
+        "Amazon DynamoDB",
+        "AWS",
+        "GCP",
+        "Kubernetes",
+        "Docker",
+        "Data Structures",
+        "Algorithms",
+        "RAG Systems",
+        "LLMs",
+        "Vector Databases"
+      ],
+      "soft_skills": [
+        "Problem-solving",
+        "Optimization"
+      ],
+      "languages": [
+        {
+          "language": "Python",
+          "proficiency": "Advanced"
+        }
+      ],
+      "certifications": [
+        {
+          "name": null,
+          "issuer": null,
+          "date_obtained": null,
+          "expiry_date": null
+        }
+      ]
+    },
+    "projects": [
+      {
+        "name": "V-Rag",
+        "description": "Video Based RAG System allowing users to query video content via YouTube URL or uploaded videos",
+        "technologies": [
+          "Qdrant",
+          "RAG",
+          "Streamlit"
+        ],
+        "github": "Github"
+      },
+      {
+        "name": "AutoCommit Generator",
+        "description": "Tool to automatically generate commit messages for projects locally using Ollama and Mistral",
+        "technologies": [
+          "Mistral",
+          "Ollama",
+          "Github",
+          "LLM"
+        ],
+        "github": "Github"
+      },
+      {
+        "name": "Company Scraper",
+        "description": "AI-Powered Agent that generates clean, structured summaries from company URLs",
+        "technologies": [
+          "Relevance AI",
+          "LLMs",
+          "Markdown"
+        ]
+      }
+    ],
+    "volunteer": [],
+    "awards": [],
+    "publications": [],
+    "interests": []
+  },
+  "metadata": {
+    "processing_stats": {
+      "total_tokens": 1394,
+      "api_calls": 3,
+      "processing_time": 31.555238,
+      "complexity_score": 80,
+      "strategy_used": "hierarchical_processing",
+      "success_rate": 0.9166666666666666
+    },
+    "confidence_metrics": [
+      {
+        "field_path": "level_0",
+        "confidence_score": 1.0,
+        "extraction_method": "hierarchical_processing",
+        "validation_passed": true,
+        "human_review_required": false,
+        "error_details": null
+      },
+      {
+        "field_path": "level_1",
+        "confidence_score": 0.75,
+        "extraction_method": "hierarchical_processing",
+        "validation_passed": true,
+        "human_review_required": false,
+        "error_details": null
+      },
+      {
+        "field_path": "level_2",
+        "confidence_score": 1.0,
+        "extraction_method": "hierarchical_processing",
+        "validation_passed": true,
+        "human_review_required": false,
+        "error_details": null
+      }
+    ],
+    "validation_errors": [],
+    "human_review_required": [],
+    "overall_confidence": 0.9166666666666666,
+    "total_processing_time": 31.564086,
+    "timestamp": "2025-08-01T12:16:56.358271",
+    "input_files": {
+      "input_file": "inputs/manish_resume.pdf",
+      "input_type": "pdf",
+      "schema_file": "inputs/resume_schema.json",
+      "text_length": 6226,
+      "schema_complexity": 80
+    }
+  }
+}
