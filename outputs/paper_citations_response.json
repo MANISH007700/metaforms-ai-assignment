@@ -1,0 +1,186 @@
+{
+  "extracted_data": {
+    "abstract": null,
+    "authors": [
+      {
+        "familyName": "Vaswani",
+        "givenName": "Ashish"
+      },
+      {
+        "familyName": "Shazeer",
+        "givenName": "Noam"
+      },
+      {
+        "familyName": "Parmar",
+        "givenName": "Niki"
+      },
+      {
+        "familyName": "Uszkoreit",
+        "givenName": "Jakob"
+      },
+      {
+        "familyName": "Jones",
+        "givenName": "Llion"
+      },
+      {
+        "familyName": "Gomez",
+        "givenName": "Aidan N"
+      },
+      {
+        "familyName": "Kaiser",
+        "givenName": "Łukasz"
+      },
+      {
+        "familyName": "Polosukhin",
+        "givenName": "Illia"
+      }
+    ],
+    "cff-version": "1.2.0",
+    "contact": [
+      {
+        "type": "person",
+        "name": "Ashish Vaswani"
+      },
+      {
+        "type": "person",
+        "name": "Noam Shazeer"
+      },
+      {
+        "type": "person",
+        "name": "Niki Parmar"
+      },
+      {
+        "type": "person",
+        "name": "Jakob Uszkoreit"
+      },
+      {
+        "type": "person",
+        "name": "Llion Jones"
+      },
+      {
+        "type": "person",
+        "name": "Aidan N Gomez"
+      },
+      {
+        "type": "person",
+        "name": "Łukasz Kaiser"
+      },
+      {
+        "type": "person",
+        "name": "Illia Polosukhin"
+      }
+    ],
+    "date-released": "2017",
+    "doi": null,
+    "identifiers": [
+      {
+        "type": "doi",
+        "value": "NIPS2017_3f5ee243"
+      },
+      {
+        "type": "url",
+        "value": "https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf"
+      }
+    ],
+    "keywords": [
+      "attention",
+      "neural networks",
+      "transformers",
+      "machine learning",
+      "deep learning",
+      "natural language processing"
+    ],
+    "license": null,
+    "license-url": null,
+    "message": "If you use this software, please cite it using the metadata from this file.",
+    "preferred-citation": {
+      "authors": [
+        "Vaswani, Ashish",
+        "Shazeer, Noam",
+        "Parmar, Niki",
+        "Uszkoreit, Jakob",
+        "Jones, Llion",
+        "Gomez, Aidan N",
+        "Kaiser, Łukasz",
+        "Polosukhin, Illia"
+      ],
+      "title": "Attention is All you Need",
+      "publication": "Advances in Neural Information Processing Systems",
+      "publisher": "Curran Associates, Inc.",
+      "year": 2017,
+      "volume": "30",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf",
+      "editors": [
+        "I. Guyon",
+        "U. Von Luxburg",
+        "S. Bengio",
+        "H. Wallach",
+        "R. Fergus",
+        "S. Vishwanathan",
+        "R. Garnett"
+      ]
+    },
+    "references": [
+      {
+        "type": "paper",
+        "title": "Attention is All you Need",
+        "authors": [
+          "Ashish Vaswani",
+          "Noam Shazeer",
+          "Niki Parmar",
+          "Jakob Uszkoreit",
+          "Llion Jones",
+          "Aidan N Gomez",
+          "Łukasz Kaiser",
+          "Illia Polosukhin"
+        ],
+        "year": 2017,
+        "publisher": "Curran Associates, Inc.",
+        "venue": "Advances in Neural Information Processing Systems",
+        "volume": "30",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf"
+      }
+    ],
+    "repository": null,
+    "repository-artifact": null,
+    "repository-code": null,
+    "title": "Attention is All you Need",
+    "type": "software",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf",
+    "version": null
+  },
+  "metadata": {
+    "processing_stats": {
+      "total_tokens": 205,
+      "api_calls": 21,
+      "processing_time": 56.88037,
+      "complexity_score": 95,
+      "strategy_used": "decomposed_parallel",
+      "success_rate": 0.5714285714285714
+    },
+    "confidence_metrics": [
+      {
+        "field_path": "decomposed_root",
+        "confidence_score": 0.5714285714285714,
+        "extraction_method": "decomposed_parallel",
+        "validation_passed": false,
+        "human_review_required": true,
+        "error_details": null
+      }
+    ],
+    "validation_errors": [],
+    "human_review_required": [
+      "decomposed_root"
+    ],
+    "overall_confidence": 0.5714285714285714,
+    "total_processing_time": 56.887204,
+    "timestamp": "2025-08-01T18:47:13.735748",
+    "input_files": {
+      "input_file": "inputs/paper_dump.txt",
+      "input_type": "text",
+      "schema_file": "inputs/paper_citations_schema.json",
+      "text_length": 618,
+      "schema_complexity": 95
+    }
+  }
+}

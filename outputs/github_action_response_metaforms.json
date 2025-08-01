@@ -1,0 +1,98 @@
+{
+  "extracted_data": {
+    "name": "MkDocs Publisher",
+    "author": "DevRel Team",
+    "description": "A simple action to build an MkDocs site and push it to the gh-pages branch",
+    "inputs": {
+      "python-version": {
+        "description": "The version of Python to set up for building.",
+        "default": "3.11",
+        "required": false
+      },
+      "requirements-file": {
+        "description": "Path to the Python requirements file",
+        "required": true
+      },
+      "gh-token": {
+        "description": "GitHub token for deployment.",
+        "required": true,
+        "deprecationMessage": "Prefer using GITHUB_TOKEN environment variable directly if permissions allow."
+      }
+    },
+    "outputs": {
+      "page-url": {
+        "description": "The URL of the deployed GitHub Pages site",
+        "value": "${{ steps.deploy.outputs.page_url }}"
+      }
+    },
+    "runs": {
+      "using": "composite",
+      "steps": [
+        {
+          "uses": "actions/checkout@v4"
+        },
+        {
+          "id": "setup_python",
+          "uses": "actions/setup-python@v5",
+          "with": {
+            "python-version": "${{ inputs.python-version }}"
+          }
+        },
+        {
+          "name": "Install Python Packages",
+          "shell": "bash",
+          "run": "pip install -r ${{ inputs.requirements-file }}"
+        },
+        {
+          "shell": "bash",
+          "run": "mkdocs build"
+        },
+        {
+          "id": "deploy",
+          "uses": "peaceiris/actions-gh-pages@v3",
+          "if": "github.ref == 'refs/heads/main'",
+          "with": {
+            "github_token": "${{ inputs.gh-token }}",
+            "publish_dir": "./site"
+          }
+        }
+      ]
+    },
+    "branding": {
+      "color": "blue",
+      "icon": "book-open"
+    }
+  },
+  "metadata": {
+    "processing_stats": {
+      "total_tokens": 612,
+      "api_calls": 7,
+      "processing_time": 18.393139,
+      "complexity_score": 95,
+      "strategy_used": "decomposed_parallel",
+      "success_rate": 1.0
+    },
+    "confidence_metrics": [
+      {
+        "field_path": "decomposed_root",
+        "confidence_score": 1.0,
+        "extraction_method": "decomposed_parallel",
+        "validation_passed": true,
+        "human_review_required": false,
+        "error_details": null
+      }
+    ],
+    "validation_errors": [],
+    "human_review_required": [],
+    "overall_confidence": 1.0,
+    "total_processing_time": 18.397833,
+    "timestamp": "2025-08-01T18:50:49.379043",
+    "input_files": {
+      "input_file": "inputs/github_action_sample_input.txt",
+      "input_type": "text",
+      "schema_file": "inputs/github_action_schema.json",
+      "text_length": 2841,
+      "schema_complexity": 95
+    }
+  }
+}

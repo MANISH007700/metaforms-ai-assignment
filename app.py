@@ -155,16 +155,16 @@ class SchemaAnalyzer:
                         count += self._count_required(item)
         
         return count
-    
     def _analyze_field_types(self, obj: Any) -> Dict[str, int]:
-        """Analyze field type distribution"""
+        """Analyze field type distribution - simplified version"""
         types = {}
         
         def count_types(schema_obj):
             if isinstance(schema_obj, dict):
                 if 'type' in schema_obj:
                     field_type = schema_obj['type']
-                    types[field_type] = types.get(field_type, 0) + 1
+                    if isinstance(field_type, str):
+                        types[field_type] = types.get(field_type, 0) + 1
                 
                 for value in schema_obj.values():
                     if isinstance(value, (dict, list)):
@@ -173,8 +173,32 @@ class SchemaAnalyzer:
                 for item in schema_obj:
                     count_types(item)
         
-        count_types(obj)
+        try:
+            count_types(obj)
+        except:
+            types['unknown'] = 1
+        
         return types
+
+    # def _analyze_field_types(self, obj: Any) -> Dict[str, int]:
+    #     """Analyze field type distribution"""
+    #     types = {}
+        
+    #     def count_types(schema_obj):
+    #         if isinstance(schema_obj, dict):
+    #             if 'type' in schema_obj:
+    #                 field_type = schema_obj['type']
+    #                 types[field_type] = types.get(field_type, 0) + 1
+                
+    #             for value in schema_obj.values():
+    #                 if isinstance(value, (dict, list)):
+    #                     count_types(value)
+    #         elif isinstance(schema_obj, list):
+    #             for item in schema_obj:
+    #                 count_types(item)
+        
+    #     count_types(obj)
+    #     return types
     
     def _find_dependencies(self, obj: Any) -> List[str]:
         """Find field dependencies and references"""

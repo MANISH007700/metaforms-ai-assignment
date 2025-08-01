@@ -1,0 +1,233 @@
+{
+  "extracted_data": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "basics": {
+      "name": "MANISH SHARMA",
+      "label": "Machine Learning Engineer",
+      "image": null,
+      "email": null,
+      "phone": "+91-9342533525",
+      "url": null,
+      "summary": "Experienced Machine Learning Engineer with expertise in building and deploying AI solutions. Specializes in LLM fine-tuning, recommendation systems, and RAG pipelines. Currently working at Parspec.io with previous experience at Docsumo-AI and research work at Indian Institute of Science.",
+      "location": {
+        "address": null,
+        "postalCode": "560068",
+        "city": "Bangalore",
+        "countryCode": "IN",
+        "region": "Karnataka"
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": null,
+          "url": null
+        },
+        {
+          "network": "Twitter",
+          "username": null,
+          "url": null
+        },
+        {
+          "network": "GitHub",
+          "username": null,
+          "url": null
+        },
+        {
+          "network": "Kaggle",
+          "username": null,
+          "url": null
+        },
+        {
+          "network": "Gmail",
+          "username": null,
+          "url": null
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Parspec.io",
+        "location": "Bangalore",
+        "position": "Machine Learning Engineer - 2",
+        "url": "https://parspec.io",
+        "startDate": "2024-01",
+        "endDate": null,
+        "summary": "Senior ML engineering role focused on building recommendation systems and improving model performance",
+        "highlights": [
+          "Built Datasheet Recommendation System with 80% latency reduction using AWS DynamoDB and Gemini 2.0 Flash LLM",
+          "Fine-tuned Llama 3.3 70B Instruct Model achieving 90% accuracy across 5M documents",
+          "Developed family name extraction algorithm improving recall from 89% to 96%",
+          "Migrated AI-dev Kubernetes workload to AWS EKS",
+          "Implemented LLM as Judge pipeline reducing human annotation by 74%",
+          "Built multimodal RAG pipeline achieving 0.94 MRR in retrieval"
+        ]
+      },
+      {
+        "name": "Docsumo-AI",
+        "location": "Bangalore",
+        "position": "Machine Learning Scientist",
+        "url": "https://docsumo.com",
+        "startDate": "2022-12",
+        "endDate": "2023-12",
+        "summary": "ML scientist role focused on document processing and extraction systems",
+        "highlights": [
+          "Implemented Advanced Document KV + Table Extractor using LayoutLM, BROS, YOLO architectures",
+          "Integrated ML & DL architectures into 10+ Custom APIs with MRR $80K-100K",
+          "Built Chat-AI integration using LangChain and PineCone-DB",
+          "Reduced annotation time from 1 day to ~2hrs using GPT-KV LLM Extractor",
+          "Implemented Advanced Synthetic Data Generation Pipeline"
+        ]
+      },
+      {
+        "name": "Indian Institute of Science",
+        "location": "Bangalore",
+        "position": "Research Assistant Intern",
+        "startDate": "2021-06",
+        "endDate": "2021-09",
+        "summary": "Research internship focused on Hindi OCR and Speech Recognition",
+        "highlights": [
+          "Collated and PreProcessed Hindi Datasets for OCR and Speech Recognition",
+          "Worked with PyTesseract and EasyOCR for Text Extractions",
+          "Implemented ASR Tasks using Librosa and MelSpectrogram"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "V-Rag",
+        "description": "Video Based RAG System for querying video content",
+        "highlights": [
+          "Developed video querying system via YouTube URL or uploaded videos",
+          "Implemented video chunking and indexing with Qdrant",
+          "Integrated QA pipeline for frame and timestamp retrieval",
+          "Deployed solution with Streamlit UI"
+        ],
+        "keywords": [
+          "Qdrant",
+          "RAG",
+          "Video-Querying"
+        ],
+        "type": "application"
+      },
+      {
+        "name": "AutoCommit Generator",
+        "description": "Local commit message generator using Ollama and Mistral",
+        "highlights": [
+          "Built local commit message generation system",
+          "Implemented privacy-focused solution",
+          "Developed efficient bash script integration"
+        ],
+        "keywords": [
+          "Mistral",
+          "Ollama",
+          "Github",
+          "LLM"
+        ],
+        "type": "application"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Programming",
+        "keywords": [
+          "Python",
+          "FastAPI",
+          "Flask",
+          "GitHub"
+        ]
+      },
+      {
+        "name": "Machine Learning",
+        "keywords": [
+          "PyTorch",
+          "TensorFlow",
+          "HuggingFace",
+          "LLMs",
+          "RAG",
+          "GenAI"
+        ]
+      },
+      {
+        "name": "Cloud & DevOps",
+        "keywords": [
+          "AWS",
+          "GCP",
+          "Kubernetes",
+          "Docker",
+          "EKS",
+          "ECS"
+        ]
+      },
+      {
+        "name": "Databases",
+        "keywords": [
+          "MySQL",
+          "Neo4j",
+          "DynamoDB",
+          "Hasura-DB"
+        ]
+      }
+    ],
+    "education": [],
+    "awards": [],
+    "certificates": [],
+    "publications": [],
+    "languages": [],
+    "interests": [],
+    "references": [],
+    "volunteer": [],
+    "meta": {
+      "canonical": null,
+      "version": "v1.0.0",
+      "lastModified": "2024-01-01T00:00:00"
+    }
+  },
+  "metadata": {
+    "processing_stats": {
+      "total_tokens": 1394,
+      "api_calls": 3,
+      "processing_time": 30.627121,
+      "complexity_score": 80,
+      "strategy_used": "hierarchical_processing",
+      "success_rate": 0.8277777777777777
+    },
+    "confidence_metrics": [
+      {
+        "field_path": "level_0",
+        "confidence_score": 1.0,
+        "extraction_method": "hierarchical_processing",
+        "validation_passed": true,
+        "human_review_required": false,
+        "error_details": null
+      },
+      {
+        "field_path": "level_1",
+        "confidence_score": 0.7333333333333333,
+        "extraction_method": "hierarchical_processing",
+        "validation_passed": true,
+        "human_review_required": false,
+        "error_details": null
+      },
+      {
+        "field_path": "level_2",
+        "confidence_score": 0.75,
+        "extraction_method": "hierarchical_processing",
+        "validation_passed": true,
+        "human_review_required": false,
+        "error_details": null
+      }
+    ],
+    "validation_errors": [],
+    "human_review_required": [],
+    "overall_confidence": 0.8277777777777777,
+    "total_processing_time": 30.640009,
+    "timestamp": "2025-08-01T18:42:45.910246",
+    "input_files": {
+      "input_file": "inputs/manish_resume.pdf",
+      "input_type": "pdf",
+      "schema_file": "inputs/resume_schema_meta.json",
+      "text_length": 6226,
+      "schema_complexity": 80
+    }
+  }
+}
