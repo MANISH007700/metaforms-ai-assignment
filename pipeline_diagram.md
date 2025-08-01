@@ -140,38 +140,6 @@ Complexity Score → Strategy Choice
 Error Detected → Error Type Classification → Recovery Attempt → Fallback → Final Result
 ```
 
-## File Dependencies
-
-```
-app.py (Core Engine)
-├── TextToJSONExtractor
-│   ├── extract()
-│   ├── _execute_extraction_strategy()
-│   └── _finalize_extraction()
-├── SchemaAnalyzer
-│   ├── analyze_schema()
-│   └── _calculate_complexity_score()
-├── ClaudeAPIClient
-│   ├── extract_structured_data()
-│   └── _build_extraction_prompt()
-└── Validation Logic
-    ├── _validate_against_schema()
-    └── _calculate_extraction_confidence()
-
-general_extractor.py (Unified Interface)
-├── detect_input_type()
-├── extract_text_from_pdf()
-├── read_text_file()
-├── extract_from_file()
-└── main() (CLI)
-
-config.py (Configuration)
-├── settings.claude_api_key
-├── settings.claude_model
-└── settings.default_confidence_threshold
-```
-
-## Usage Examples
 
 ### Command Line (Unified):
 ```bash
@@ -186,23 +154,6 @@ python general_extractor.py \
   --input-file sample_text.txt \
   --schema-file customer_service_schema.json \
   --output-file text_result.json
-```
-
-### Programmatic (Unified):
-```python
-import asyncio
-from general_extractor import extract_from_file
-
-async def main():
-    # Works with both PDF and text
-    result = await extract_from_file(
-        input_file_path="any_file.pdf",  # or .txt, .md, .json
-        schema_file_path="schema.json",
-        output_file_path="result.json"
-    )
-    print(f"Input type: {result['metadata']['input_files']['input_type']}")
-
-asyncio.run(main())
 ```
 
 ## Data Flow Summary

@@ -1,10 +1,11 @@
-# File-Based Text-to-JSON Extraction System
+# Universal File-to-JSON Extraction System
 
-This system extracts structured data from text files using JSON schemas and stores the results. It's built on top of the advanced Claude API-based extraction system.
+This system automatically extracts structured data from any file type (PDF, text, markdown, etc.) using JSON schemas and stores the results. It's built on top of the advanced Claude API-based extraction system with intelligent file type detection.
 
 ## Features
 
-- 📁 **File-based input**: Takes text from `.txt` files and schemas from `.json` files
+- 🎯 **Universal input**: Automatically handles PDF, TXT, MD, JSON files
+- 🔍 **Smart detection**: Auto-detects file type and processes accordingly
 - 🎯 **Adaptive processing**: Automatically chooses the best extraction strategy based on schema complexity
 - 📊 **Comprehensive metadata**: Provides confidence scores, processing stats, and validation results
 - 🔍 **Human review flags**: Identifies fields that may need manual review
@@ -17,11 +18,10 @@ This system extracts structured data from text files using JSON schemas and stor
 Make sure you have the required dependencies:
 
 ```bash
-pip install aiohttp tiktoken
+pip install aiohttp tiktoken PyMuPDF pdfplumber PyPDF2 python-dotenv
 ```
 
 ### 2. Configure API Key
-
 
 **Option A: Manual Setup**
 Create a `.env` file in the project directory and add your Claude API key:
@@ -36,105 +36,86 @@ Or manually create `.env` file with:
 CLAUDE_API_KEY=your-actual-claude-api-key-here
 ```
 
-### 3. Run with Sample Files
 
-Test the system with the provided sample files:
+### 3. Use the Universal Extractor
 
-```bash
-python test_extraction.py
-```
-
-This will run two test cases:
-- Customer service interaction extraction
-- Email conversation extraction
-
-### 4. Use Your Own Files
+The `general_extractor.py` is your main entry point for all file types:
 
 ```bash
-python file_extractor.py \
-  --text-file your_text.txt \
-  --schema-file your_schema.json \
-  --output-file result.json \
-  --confidence-threshold 0.7
+# PDF Resume
+python general_extractor.py \
+  --input-file resume.pdf \
+  --schema-file resume_schema.json \
+  --output-file result.json
+
+# Text File
+python general_extractor.py \
+  --input-file document.txt \
+  --schema-file schema.json \
+  --output-file result.json
+
+# Markdown File
+python general_extractor.py \
+  --input-file notes.md \
+  --schema-file schema.json \
+  --output-file result.json
 ```
 
 ## File Structure
 
 ```
-metaforms/
-├── app.py                          # Main extraction system
-├── file_extractor.py              # File-based extraction interface
-├── test_extraction.py             # Test script with sample files
-├── config.py                      # Configuration (API key)
-├── sample_text.txt                # Sample customer service text
-├── customer_service_schema.json   # Sample customer service schema
-├── email_conversation.txt         # Sample email conversation
-├── email_schema.json              # Sample email schema
+metaforms-ai-assignment/
+├── general_extractor.py           # 🚀 MAIN ENTRY POINT
+├── app.py                         # Core extraction engine
+├── config.py                      # Configuration with .env
+├── req.txt                        # Dependencies
+├── inputs/                        # Input files directory
+├── outputs/                       # Output files directory
+├── PIPELINE.md                    # Detailed pipeline doc
+├── pipeline_diagram.md            # Visual flow diagrams
 └── README.md                      # This file
 ```
 
-## Sample Files
+## Supported File Types
 
-### 1. Customer Service Sample
+### 📄 PDF Files (.pdf)
+- **Automatic text extraction** using multiple libraries
+- **Fallback system**: PyMuPDF → pdfplumber → PyPDF2
+- **Complex layout handling** for resumes, documents, reports
 
-**Text File**: `sample_text.txt`
-- Contains a customer service interaction report
-- Includes customer info, interaction details, technical specs, and outcomes
+### 📝 Text Files (.txt, .md, .json)
+- **Direct file reading** for immediate processing
+- **UTF-8 encoding** support
+- **Markdown parsing** for structured documents
 
-**Schema File**: `customer_service_schema.json`
-- Defines structure for customer data, interaction details, billing info, and support tickets
-- Includes validation rules and required fields
-
-### 2. Email Conversation Sample
-
-**Text File**: `email_conversation.txt`
-- Contains a multi-party email conversation about a project
-- Includes technical requirements, timeline, budget, and team assignments
-
-**Schema File**: `email_schema.json`
-- Defines structure for conversation participants, messages, project details, and agreements
-- Handles complex nested data with arrays and objects
+### 🔄 Auto-Detection Logic
+```
+File Extension Check:
+├── .pdf → PDF (extract text)
+├── .txt, .md, .json → Text (direct read)
+└── Other → Try text read, fallback to PDF
+```
 
 ## Usage Examples
 
 ### Command Line Usage
 
 ```bash
-# Basic usage
-python file_extractor.py --text-file input.txt --schema-file schema.json
+# Basic usage with any file type
+python general_extractor.py --input-file input.pdf --schema-file schema.json
 
 # With custom output and confidence threshold
-python file_extractor.py \
-  --text-file input.txt \
+python general_extractor.py \
+  --input-file input.txt \
   --schema-file schema.json \
   --output-file my_result.json \
   --confidence-threshold 0.8
 
 # With API key override
-python file_extractor.py \
-  --text-file input.txt \
+python general_extractor.py \
+  --input-file input.md \
   --schema-file schema.json \
   --api-key "your-api-key-here"
-```
-
-### Programmatic Usage
-
-```python
-import asyncio
-from file_extractor import extract_from_files
-
-async def main():
-    result = await extract_from_files(
-        text_file_path="input.txt",
-        schema_file_path="schema.json",
-        output_file_path="result.json",
-        confidence_threshold=0.7
-    )
-    
-    print(f"Confidence: {result['metadata']['overall_confidence']:.2f}")
-    print(f"Processing time: {result['metadata']['total_processing_time']:.2f}s")
-
-asyncio.run(main())
 ```
 
 ## Output Format
@@ -144,7 +125,7 @@ The system generates a comprehensive JSON result with:
 ```json
 {
   "extracted_data": {
-    // The structured data extracted from the text
+    // The structured data extracted from the file
   },
   "metadata": {
     "processing_stats": {
@@ -170,7 +151,8 @@ The system generates a comprehensive JSON result with:
     "total_processing_time": 5.67,
     "timestamp": "2024-03-15T10:30:00",
     "input_files": {
-      "text_file": "input.txt",
+      "input_file": "resume.pdf",
+      "input_type": "pdf",  // or "text"
       "schema_file": "schema.json",
       "text_length": 2048,
       "schema_complexity": 45
@@ -178,74 +160,6 @@ The system generates a comprehensive JSON result with:
   }
 }
 ```
-
-## Schema Design Tips
-
-### 1. Simple Schema Example
-
-```json
-{
-  "type": "object",
-  "properties": {
-    "name": {"type": "string"},
-    "age": {"type": "number"},
-    "email": {"type": "string"},
-    "active": {"type": "boolean"}
-  },
-  "required": ["name", "email"]
-}
-```
-
-### 2. Complex Schema Example
-
-```json
-{
-  "type": "object",
-  "properties": {
-    "customer": {
-      "type": "object",
-      "properties": {
-        "name": {"type": "string"},
-        "contact": {
-          "type": "object",
-          "properties": {
-            "email": {"type": "string"},
-            "phone": {"type": "string"}
-          }
-        }
-      }
-    },
-    "orders": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {"type": "string"},
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "product": {"type": "string"},
-                "quantity": {"type": "number"},
-                "price": {"type": "number"}
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-### 3. Schema Features
-
-- **Enums**: `"enum": ["option1", "option2", "option3"]`
-- **Required fields**: `"required": ["field1", "field2"]`
-- **Nested objects**: Use `"type": "object"` with `properties`
-- **Arrays**: Use `"type": "array"` with `items`
-- **Validation**: The system validates against your schema
 
 ## Processing Strategies
 
@@ -265,10 +179,11 @@ The system provides comprehensive error handling:
 - **API errors**: Network and Claude API error handling
 - **Validation errors**: Schema compliance checking
 - **Human review flags**: Fields that may need manual review
+- **File type errors**: Automatic fallback for unsupported formats
 
 ## Performance Tips
 
-1. **Text length**: For very long texts (>50KB), consider chunking
+1. **File size**: For very large files (>50KB), consider chunking
 2. **Schema complexity**: Complex schemas take longer but provide better structure
 3. **Confidence threshold**: Higher thresholds (0.8+) may require more API calls
 4. **Caching**: Results are not cached by default - implement caching for repeated extractions
@@ -277,7 +192,7 @@ The system provides comprehensive error handling:
 
 ### Common Issues
 
-1. **API Key Error**: Make sure your Claude API key is set in `config.py`
+1. **API Key Error**: Make sure your Claude API key is set in `.env` file
 2. **File Encoding**: Ensure text files are UTF-8 encoded
 3. **Schema Validation**: Check that your JSON schema is valid
 4. **Memory Issues**: For very large files, consider processing in chunks
@@ -300,4 +215,4 @@ This project is part of the MetaForms text extraction system.
 For issues or questions:
 1. Check the error messages in the console output
 2. Verify your input files and schema format
-3. Ensure your API key is valid and has sufficient credits 
+3. Ensure your API key is valid and has sufficient credits
